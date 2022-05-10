@@ -1,0 +1,5 @@
+<dict>
+	<string name="name">Item Reroller Reworked</string>
+	<string name="author">Kelly (ale)</string>
+	<string name="description">F5 to open menu, select items to reroll for. Rerolling will continue til items are found or 250 rolls</string>
+</dict>

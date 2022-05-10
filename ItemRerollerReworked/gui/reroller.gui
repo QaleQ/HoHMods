@@ -1,0 +1,97 @@
+<gui>
+	<sprites>
+%include "gui/closebutton_sprites.inc"
+%include "gui/scalablebutton_sprites.inc"
+%include "gui/scrollbar_sprites.inc"
+%include "gui/main_menu/checkbox_sprites.inc"
+	</sprites>
+
+	<doc>
+		<group>
+			<rect width="430" height="170" spriteset="gui/variable/bigwindow_borders.sval" anchor="0.5 0.5">
+				<!-- Header -->
+				<rect width="430" height="18" offset="2 2" flow="hbox">
+					<!-- Headline -->
+					<rect width="405" height="18" spriteset="gui/variable/headline_hor.sval">
+						<text font="gui/fonts/arial11_bold.fnt" text="Item Finder" anchor="0.5 0.5" />
+					</rect>
+
+					<!-- Separator -->
+					<rect width="3" height="18" spriteset="gui/variable/3pxbar_vert.sval" />
+
+					<!-- Close button -->
+					<spritebutton id="close" spriteset="close" func="close" />
+				</rect>
+
+				<!-- Separator -->
+				<rect width="427" height="3" offset="2 20" spriteset="gui/variable/3pxbar_hor.sval" />
+
+			<rect width="426" height="146"  offset="2 22" color="#202a26FF" shadow="#0c120fFF" shadowsize="2">
+
+			<rect width="426" height="18" >
+						<text font="gui/fonts/arial11.fnt" text="Select items to automatically reroll for" offset="119 6" />
+					</rect>
+
+				<!-- Separator -->
+				<rect width="426" height="3" offset="0 30" spriteset="gui/variable/3pxbar_hor.sval" />
+
+
+				<!-- Item column 1 -->
+					<scalebutton spriteset="scalebutton" id="item0" offset="15 45" width="20" font="gui/fonts/arial11.fnt" text="?" func="item-button0" />
+
+					<rect width="159" offset="45 45" inner="true" height="18" spriteset="gui/variable/headline_hor.sval">
+						<text id="picked0" font="gui/fonts/arial11.fnt" text="Item 1" offset="5 1"/>
+					</rect>
+
+
+					<scalebutton spriteset="scalebutton" id="item1" offset="15 75" width="20" font="gui/fonts/arial11.fnt" text="?" func="item-button1" />
+
+					<rect width="159" height="18" offset="45 75" spriteset="gui/variable/headline_hor.sval">
+						<text id="picked1" font="gui/fonts/arial11.fnt" text="Item 1 alternative" offset="5 1" />
+					</rect>
+				
+
+				<!-- Item column 2 -->
+					<scalebutton spriteset="scalebutton" id="item2" offset="230 45" width="20" font="gui/fonts/arial11.fnt" text="?" func="item-button2" />
+
+					<rect width="159" height="18" offset="260 45" spriteset="gui/variable/headline_hor.sval">
+						<text id="picked2" font="gui/fonts/arial11.fnt" text="Item 2" offset="5 1" />
+					</rect>
+
+
+					<scalebutton spriteset="scalebutton" id="item3" offset="230 75" width="20" font="gui/fonts/arial11.fnt" text="?" func="item-button3" />
+
+					<rect width="159" height="18" offset="260 75" spriteset="gui/variable/headline_hor.sval">
+						<text id="picked3" font="gui/fonts/arial11.fnt" text="Item 2 alternative" offset="5 1" />
+					</rect>
+
+					<scalebutton spriteset="scalebutton" id="clearitems" offset="122 115" width="180" font="gui/fonts/arial11.fnt" text="Clear Selections" func="clearitems" />
+				</rect>
+
+			</rect>
+
+
+		<!-- Item Popup -->
+
+		<rect id="popup-parent" visible="false" spriteset="gui/variable/bigwindow_borders.sval" width="169" height="222" anchor="0.5 0.5" color="#202a26FF" spacing="4">
+
+			<!-- List -->
+			<scrollrect id="scrollable-list" offset="2 2" width="158" height="218" flow="vbox" color="#202a26FF" shadow="#0c120fFF" shadowsize="2" />
+			
+			<!-- Scrollbar -->
+			<scrollbar forid="scrollable-list" offset="-1 0" spriteset="scrollbar" outside="true" buttons-size="14" trough-offset="18" handle-border="2" />
+
+			<!-- Item Template -->
+			<rect id="item-template" visible="false" width="156" height="18" flow="vbox">
+				<!-- Name -->
+				<button id="item-container" width="157" height="18" spriteset="gui/variable/bigwindow_borders.sval" color="#202a26FF" shadow="#000000af" shadowsize="4">
+					<text id="item-name" offset="4 1" font="gui/fonts/arial11.fnt" />
+				</button>
+			</rect>
+
+		</rect>
+		
+	</group>
+
+	</doc>
+</gui>
